@@ -2,10 +2,21 @@ const App = () => {
 
   const now = new Date();
 
+  let a = 10;
+  let b = 20;
+  let answer = a + b;
+
   return (
-    <div>
-      <p>Hello word! it is { now.toString() }</p>
-    </div>
+    <>
+      <p>My first react application.</p>
+      <div>
+        <p>{a} plus {b} is { answer }</p>
+        <p>Hello word! it is { now.toString() }</p>
+      </div>
+      <br />
+
+
+    </>
   )
 }
 
