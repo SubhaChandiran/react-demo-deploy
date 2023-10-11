@@ -1,9 +1,10 @@
 const App = () => {
 
-  console.log("Hello word form component App")
+  const now = new Date();
+
   return (
     <div>
-      <p>Hello word!</p>
+      <p>Hello word! it is { now.toString() }</p>
     </div>
   )
 }
