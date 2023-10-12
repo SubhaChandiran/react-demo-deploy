@@ -1,21 +1,19 @@
+const Hello = () => {
+  return (
+    <div>
+      <p>Hello world</p>
+    </div>
+  )
+}
+
 const App = () => {
-
-  const now = new Date();
-
-  let a = 10;
-  let b = 20;
-  let answer = a + b;
 
   return (
     <>
-      <p>My first react application.</p>
       <div>
-        <p>{a} plus {b} is { answer }</p>
-        <p>Hello word! it is { now.toString() }</p>
+        <h1>Greeting</h1>
       </div>
-      <br />
-
-
+       <Hello />      
     </>
   )
 }
