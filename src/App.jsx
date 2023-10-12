@@ -1,3 +1,5 @@
+import './App.css'
+
 const Hello = (props) => {
   console.log(props)
   return (
@@ -8,11 +10,10 @@ const Hello = (props) => {
 }
 
 const App = () => {
-
   return (
     <>
       <div>
-        <h1 style={{ color: 'red', backgroundColor:'yellow'}}>Greeting</h1>
+        <h1>Greeting</h1>
       </div>
        <Hello name='Subhash' age='26'/>      
     </>
