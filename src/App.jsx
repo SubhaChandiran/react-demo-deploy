@@ -1,7 +1,8 @@
-const Hello = () => {
+const Hello = (props) => {
+  console.log(props)
   return (
     <div>
-      <p>Hello world</p>
+      <p>Hello {props.name}, your age is { props.age }</p>
     </div>
   )
 }
@@ -11,9 +12,9 @@ const App = () => {
   return (
     <>
       <div>
-        <h1>Greeting</h1>
+        <h1 style={{ color: 'red', backgroundColor:'yellow'}}>Greeting</h1>
       </div>
-       <Hello />      
+       <Hello name='Subhash' age='26'/>      
     </>
   )
 }
