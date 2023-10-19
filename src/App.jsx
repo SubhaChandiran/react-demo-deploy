@@ -15,20 +15,37 @@ import './App.css'
 //       <div>
 //         <h1>Greeting</h1>
 //       </div>
-//        <Hello name='Subhash' age='26'/>      
+//        <Hello name='Subhash' age='26'/>
 //     </>
 //   )
 // }
+// ========================
+// function Card(props) {
+//   return (
+//     <div>
+//       <h3>{props.title}</h3>
+//       <h4>{props.price}</h4>
+//       <h5>{ props.plan}</h5>
+//     </div>
+//   )
+// }
 
-function Card(props) {
+const Card = ({ title, price, plan }) => {
   return (
     <div>
-      <h3>{props.title}</h3>
-      <h4>{props.price}</h4>
-      <h5>{ props.plan}</h5>
+      <h2>{title}</h2>
+      <p>{price}</p>
+      <ul>
+        {plan.map((detail, index) => (
+          <li key={index}>{detail}</li>
+        ))}
+      </ul>
     </div>
-  )
-}
+  );
+};
+
+
+
 
 const App = () => {
   const cardsData = [
@@ -36,36 +53,42 @@ const App = () => {
       title: 'FREE',
       price: '$0/month',
       plan: [
-        'Single User', '50GB Storage', 'Unlimited Public Projects', 'Community Access'
+        'Single User', '50GB Storage', 'Unlimited Public Projects', 'Community Access', 'Unlimited Private Projects', 'Dedicated Phone Support', 'Free Subdomain', 'Monthly Status Reports'
       ]
     },
     {
       title: 'PLUS',
       price: '$9/month',
       plan: [
-        '5 Users', '50GB Storage', 'Unlimited Public Projects', 'Community Access'
+        '5 Users', '50GB Storage', 'Unlimited Public Projects', 'Community Access', 'Unlimited Private Projects', 'Dedicated Phone Support', 'Free Subdomain', 'Monthly Status Reports'
       ]
     },
     {
       title: 'PRO',
       price: '$49/month',
       plan: [
-        'Unlimited Users', '50GB Storage', 'Unlimited Public Projects', 'Community Access'
-      ]
-    }
+        'Unlimited Users', '50GB Storage', 'Unlimited Public Projects', 'Community Access', 'Unlimited Private Projects', 'Dedicated Phone Support', 'Free Subdomain', 'Monthly Status Reports'
+      ],
+    },
   ]
   return (
     <>
-      <div>
-        {cardsData.map((card, index) => (
-          <Card
-            key={index}
-            title={card.title}
-            price={card.price}
-            plan={card.plan}
-          />
-        ))}
-      </div>
+        <div className='card-container'>
+          <ul>
+            <li className='card-container'>
+                  {cardsData.map((card, index) => (
+                  <div key={index} className='card'>
+                  <Card
+                  key={index}
+                  title={card.title}
+                  price={card.price}
+                  plan={card.plan}
+                  />
+                </div>
+                ))}
+            </li>
+          </ul>
+        </div>
     </>
   )
 }
