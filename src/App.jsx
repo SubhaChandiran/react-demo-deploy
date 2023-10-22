@@ -1,152 +1,103 @@
 import './App.css'
 import React from 'react';
 
-const Card = ({ title, price, plan }) => {
+function Card({ title, price, plan, titleClassName, priceClassName, planClassName }) {
   return (
     <div className='Card'>
-      <h2 className='CardHeading'>{title}</h2>
-      <p className='Cardprice'>{price}</p>
-      <ul className='CardList'>
-        {plan.map((detail, index) => (
-          <li key={index}><i className="fa fa-solid fa-check"></i>{detail}</li>
-        ))}
-      </ul>
+      <div className={titleClassName}>{title}</div>
+      <div className={priceClassName}>{price}</div>
+      <div className={planClassName}>
+        <ul>
+          {plan.map((item, index) => (
+            <li
+              key={index} className={item.disabled ? 'disabled' : ''}>
+              <i className="fa fa-solid fa-check"></i>
+              {item.disabled ? <span className='disable-points'>{item.text}</span> : item.text}
+            </li>
+          ))}
+          <button className='button'>BUTTON</button>
+        </ul>
+      </div>
     </div>
   );
-};
+}
+
 
 const cardsData = [
-    {
-      title: 'FREE',
-      price: '$0/month',
-      plan: [
-        'Single User', '50GB Storage', 'Unlimited Public Projects', 'Community Access', 'Unlimited Private Projects', 'Dedicated Phone Support', 'Free Subdomain', 'Monthly Status Reports'
-      ]
-    },
-    {
-      title: 'PLUS',
-      price: '$9/month',
-      plan: [
-        '5 Users', '50GB Storage', 'Unlimited Public Projects', 'Community Access', 'Unlimited Private Projects', 'Dedicated Phone Support', 'Free Subdomain', 'Monthly Status Reports'
-      ]
-    },
-    {
-      title: 'PRO',
-      price: '$49/month',
-      plan: [
-        'Unlimited Users', '50GB Storage', 'Unlimited Public Projects', 'Community Access', 'Unlimited Private Projects', 'Dedicated Phone Support', 'Free Subdomain', 'Monthly Status Reports'
-      ],
-    },
-  ]
-
-
+  {
+    title: 'FREE',
+    price: '$0/month',
+    plan: [
+      { text: 'Single User', disabled: false },
+      { text: '50GB Storage', disabled: false },
+      { text: 'Unlimited Public Projects', disabled: false },
+      { text: 'Community Access', disabled: false },
+      { text: 'Unlimited Private Projects', disabled: true },
+      { text: 'Dedicated Phone Support', disabled: true },
+      { text: 'Free Subdomain', disabled: true },
+      { text: 'Monthly Status Reports', disabled: true },
+    ]
+  },
+  {
+    title: 'PLUS',
+    price: '$9/month',
+    plan: [
+      { text: '5 Users', disabled: false },
+      { text: '50GB Storage', disabled: false },
+      { text: 'Unlimited Public Projects', disabled: false },
+      { text: 'Community Access', disabled: false },
+      { text: 'Unlimited Private Projects', disabled: false },
+      { text: 'Dedicated Phone Support', disabled: false },
+      { text: 'Free Subdomain', disabled: false },
+      { text: 'Monthly Status Reports', disabled: true },
+    ]
+  },
+  {
+    title: 'PRO',
+    price: '$49/month',
+    plan: [
+      { text: 'Unlimited Users', disabled: false },
+      { text: '50GB Storage', disabled: false },
+      { text: 'Unlimited Public Projects', disabled: false },
+      { text: 'Community Access', disabled: false },
+      { text: 'Unlimited Private Projects', disabled: false },
+      { text: 'Dedicated Phone Support', disabled: false },
+      { text: 'Free Subdomain', disabled: false },
+      { text: 'Monthly Status Reports', disabled: false },
+    ]
+  },
+];
 
 const App = () => {
-  
   return (
     <>
-      <h1 class="heading">React Price Card</h1>
-      <p class="firstPara">
+      <h1 className='heading'>React Price Card</h1>
+      <p className='firstPara'>
         Reproduce this user interface using a React.js application with JSX.
-        Write the code <br/>in a dynamic manner.
+        Write the code <br /> in a dynamic manner.
       </p>
-        <div className='container'>
-          <ul>
-            <li className='card-container'>
-                  {cardsData.map((card, index) => (
-                  <div key={index} className='card'>
-                  <Card
+      <div className='container'>
+        <ul>
+          <li>
+            {cardsData.map((card, index) => (
+              <div key={index} className=''>
+                <Card
                   key={index}
                   title={card.title}
                   price={card.price}
                   plan={card.plan}
-                  />
-                </div>
-                ))}
-            </li>
-          </ul>
-        </div>
+                  titleClassName="CardHeading"
+                  priceClassName="Cardprice"
+                  planClassName="CardList"
+                  buttonDisabled={index < 2}
+                />
+              </div>
+            ))}
+          </li>
+        </ul>
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default App;
-
-
-
-// 2 nd one ======================
-
-
-
-// function Card({ title, price, plan, titleClassName, priceClassName, planClassName }) {
-//   return (
-//     <div className='card'>
-//       <div className={titleClassName}>{title}</div>
-//       <div className={priceClassName}>{price}</div>
-//       <div className={planClassName}>
-//         {plan.map((item, index) => (
-//           <p key={index}>{item}</p>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-// const cardsData = [
-//   {
-//     title: 'FREE',
-//     price: '$0/month',
-//     plan: [
-//       'Single User', '50GB Storage', 'Unlimited Public Projects', 'Community Access', 'Unlimited Private Projects', 'Dedicated Phone Support', 'Free Subdomain', 'Monthly Status Reports'
-//     ]
-//   },
-//   {
-//     title: 'PLUS',
-//     price: '$9/month',
-//     plan: [
-//       '5 Users', '50GB Storage', 'Unlimited Public Projects', 'Community Access', 'Unlimited Private Projects', 'Dedicated Phone Support', 'Free Subdomain', 'Monthly Status Reports'
-//     ]
-//   },
-//   {
-//     title: 'PRO',
-//     price: '$49/month',
-//     plan: [
-//       'Unlimited Users', '50GB Storage', 'Unlimited Public Projects', 'Community Access', 'Unlimited Private Projects', 'Dedicated Phone Support', 'Free Subdomain', 'Monthly Status Reports'
-//     ],
-//   },
-// ];
-
-// const App = () => {
-//   return (
-//     <>
-//       <h1>React Price Card</h1>
-//       <p>
-//         Reproduce this user interface using a React.js application with JSX.
-//         Write the code <br /> in a dynamic manner.
-//       </p>
-//       <div>
-//         <ul>
-//           <li>
-//             {cardsData.map((card, index) => (
-//               <div key={index} className='card'>
-//                 <Card
-//                   key={index}
-//                   title={card.title}
-//                   price={card.price}
-//                   plan={card.plan}
-//                   titleClassName="title-class" // Add class name for title
-//                   priceClassName="price-class" // Add class name for price
-//                   planClassName="plan-class" // Add class name for plan
-//                 />
-//               </div>
-//             ))}
-//           </li>
-//         </ul>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default App;

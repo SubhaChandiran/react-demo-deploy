@@ -4,25 +4,23 @@
 .firstPara {
   margin-left: 310px;
   font-size: 25px;
-
 }
 .container {
-  position: relative;
   margin-left: 20%;
   display: flex;
-  /* list-style: none; */
-
-
+  justify-content: space-between;
   background: linear-gradient(45deg, #0365e8, #31abfe);
   text-align: left;
   width: 950px;
 }
 .CardHeading {
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
 }
 .Cardprice {
   text-align: center;
+  font-weight: bold;
+  font-size: 25px;
 }
 .CardList {
   list-style: none;
@@ -32,5 +30,39 @@
   background-color: white;
   margin: 30px;
   width: 500px;
-  /* list-style: none; */
+}
+.disable-points {
+  color: #c0c2c4;
+}
+.ul,
+li {
+  padding: 1px;
+  list-style: none;
+}
+.fa {
+  margin: 6px;
+}
+.button {
+  cursor: pointer;
+  border-style: none;
+  position: relative;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: blue;
+}
+.button1 {
+  cursor: pointer;
+  border-style: none;
+  position: relative;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #4ba2ff;
 }
