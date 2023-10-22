@@ -1,4 +1,36 @@
-/* h1 {
-  color: white;
-  background: red;
-} */
+.heading {
+  text-align: center;
+}
+.firstPara {
+  margin-left: 310px;
+  font-size: 25px;
+
+}
+.container {
+  position: relative;
+  margin-left: 20%;
+  display: flex;
+  /* list-style: none; */
+
+
+  background: linear-gradient(45deg, #0365e8, #31abfe);
+  text-align: left;
+  width: 950px;
+}
+.CardHeading {
+  text-align: center;
+  font-size: 15px;
+}
+.Cardprice {
+  text-align: center;
+}
+.CardList {
+  list-style: none;
+}
+.Card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 30px;
+  width: 500px;
+  /* list-style: none; */
+}
