@@ -1,5 +1,6 @@
 .heading {
   text-align: center;
+  margin-top: 50px;
 }
 .firstPara {
   margin-left: 310px;
@@ -16,11 +17,13 @@
 .CardHeading {
   text-align: center;
   font-size: 20px;
+  margin-bottom: 15px;
 }
 .Cardprice {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
+  margin-bottom: 18px;
 }
 .CardList {
   list-style: none;
@@ -28,8 +31,11 @@
 .Card {
   border-radius: 8px;
   background-color: white;
-  margin: 30px;
-  width: 500px;
+  margin: 20px;
+  width: 260px;
+  height: 390px;
+  /* justify-content: center;
+  align-items: center; */
 }
 .disable-points {
   color: #c0c2c4;
@@ -38,6 +44,8 @@
 li {
   padding: 1px;
   list-style: none;
+  display: flex;
+  text-align: center;
 }
 .fa {
   margin: 6px;
@@ -46,12 +54,13 @@ li {
   cursor: pointer;
   border-style: none;
   position: relative;
-  margin-left: 50px;
-  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-bottom: 0px;
   color: white;
   width: 150px;
   height: 40px;
   border-radius: 25px;
+  margin-top: 15px;
   background-color: blue;
 }
 .button1 {
