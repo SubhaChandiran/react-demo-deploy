@@ -3,6 +3,7 @@ import './App.css';
 import Header from './header';
 import Section from './Section';
 import Footer from './footer';
+import Navigation from './Navigation';
 
 
 
@@ -85,11 +86,10 @@ function App() {
   return (
     <>
       <div>
+        <Navigation />
         <NavDisplay items={items} />
         <Header />
         <Section />
-      </div>
-      <div>
         <Footer />
       </div>
     </>
