@@ -1,8 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
 
+// prductDetails Object
 const productDetails = [
   {
     productId: 1,
@@ -16,6 +17,7 @@ const productDetails = [
     productImg: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
     productStatus: "normal",
     productReview: false,
+    addToCart: false,
   },
   {
     productId: 2,
@@ -25,11 +27,11 @@ const productDetails = [
       endPrice: null,
       oldPrice: "$20.00",
       currentPrice: "$18.00",
-      
     },
     productImg: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
     productStatus: "sale",
     productReview: true,
+    addToCart: false,
   },
   {
     productId: 3,
@@ -43,6 +45,7 @@ const productDetails = [
     productImg: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
     productStatus: "sale",
     productReview: false,
+    addToCart: false,
   },
   {
     productId: 4,
@@ -56,6 +59,7 @@ const productDetails = [
     productImg: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
     productStatus: "normal",
     productReview: true,
+    addToCart: false,
   },
   {
     productId: 5,
@@ -69,6 +73,7 @@ const productDetails = [
     productImg: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
     productStatus: "sale",
     productReview: false,
+    addToCart: false,
   },
   {
     productId: 6,
@@ -82,6 +87,7 @@ const productDetails = [
     productImg: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
     productStatus: "normal",
     productReview: false,
+    addToCart: false,
   },
   {
     productId: 7,
@@ -91,11 +97,11 @@ const productDetails = [
       endPrice: null,
       oldPrice: "$20.00",
       currentPrice: "$18.00",
-      
     },
     productImg: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
     productStatus: "sale",
     productReview: true,
+    addToCart: false,
   },
   {
     productId: 8,
@@ -109,11 +115,12 @@ const productDetails = [
     productImg: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
     productStatus: "normal",
     productReview: true,
+    addToCart: false,
   },
 ];
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App productDetails = { productDetails }/>
-  </React.StrictMode>,
-)
+    <App productDetails={productDetails} />
+  </React.StrictMode>
+);
