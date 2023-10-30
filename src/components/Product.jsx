@@ -22,6 +22,7 @@ function Product(props) {
     }
   };
 
+
   const handleAddToCart = (event) => {
     
     event.target.disabled = true;
