@@ -1,10 +1,7 @@
-// Import the React library.
 import React from "react";
 
-// Create a React function component called Header.
 function Header() {
   return (
-    // Render the Header.
     <div>
       <header className="bg-dark py-5">
         <div className="container px-4 px-lg-5 my-5">
@@ -19,5 +16,4 @@ function Header() {
     </div>
   );
 }
-// Export the Header component so that it can be used in other components.
 export default Header;
